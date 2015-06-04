@@ -13,24 +13,10 @@ function newagame(){
     eraseCookie("cNote");
 }
 
-function save(p){
+function save(s){
 
     $.post("./kahre/savegame.php",{
-        save: "1",
-        sPage: p,
-        sDex: $("#charDex").val(),
-        sDexAkt: $("#charDexAkt").val(),
-        sHp: $("#charHP").val(),
-        sHpAkt: $("#charHpAkt").val(),
-        sLuck: $("#charLuck").val(),
-        sLuckAkt: $("#charLuckAkt").val(),
-        sFood: $("#charFood").val(),
-        sGear: $("#charGear").val(),
-        sGold: $("#charGold").val(),
-        sStuff: $("#charStuff").val(),
-        sNote: $("#charNotes").val()
-
-
+        save: s
     },function(response){
         alert(response);
     });
@@ -48,6 +34,10 @@ $(document).ready(function(){
 
     $(".newGame").click(function(){
       newagame();
+    });
+
+    $("#kSave").click(function(){
+       save("1");
     });
 
 
