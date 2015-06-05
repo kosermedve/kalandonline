@@ -17,8 +17,8 @@ function save(s){
 
     $.post("./kahre/savegame.php",{
         save: s
-    },function(response){
-        alert(response);
+    },function(html){
+        alert(html);
     });
 }
 $(document).ready(function(){

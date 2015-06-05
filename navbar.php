@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="menu">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuNav">
                 <span class="icon-bar"></span>

@@ -19,7 +19,7 @@ if (isset($_POST["save"])){
 
     $query = "SELECT * FROM gamesave WHERE sName='$sName';";
     $result = mysql_query($query)or die(mysql_error());
-
+    mysql_close($dbhandle);
     $num_row = mysql_num_rows($result);
 
     if( $num_row >= 1 ) {

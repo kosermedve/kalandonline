@@ -5,11 +5,18 @@ if (isset($_SESSION['user_name'])){
     $user = $_SESSION['user_name'];
 
     $query = "SELECT *
-    FROM `felhasznalok`
-    WHERE `username` = '$user';";
+              FROM felhasznalok
+              WHERE username = '$user';";
 
     $result = mysql_query($query);
     $row = mysql_fetch_assoc($result);
+
+    $sQuery = "SELECT *
+              FROM gamesave
+              WHERE sName = '$user'";
+
+    $sResult = mysql_query($sQuery);
+
     mysql_close($dbhandle);
 
     echo '
@@ -112,6 +119,19 @@ if (isset($_SESSION['user_name'])){
                         <div class="panel-heading" align="center">
                             <h4>Mentéseim</h4>
                         </div>
+                        <table class="table">
+                            ';
+                            while ($sRow = mysql_fetch_array($sResult)){
+                                echo'
+                                    <tr>
+                                        <td>'.$sRow["story"].'</td>
+                                        <td>'.$sRow["page"].'</td>
+                                        <td>'.$sRow["dex"].'/'.$sRow["dexAkt"].'</td>
+                                    </tr>
+                                ';
+                            }
+                        echo'
+                        </table>
                     </div>
                 </div>
             </div>
