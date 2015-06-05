@@ -120,6 +120,14 @@ if (isset($_SESSION['user_name'])){
                             <h4>Mentéseim</h4>
                         </div>
                         <table class="table">
+                        <tr>
+                            <td><label>Történet</label></td>
+                            <td><label>Fejezet</label></td>
+                            <td><label>Ügyesség</label></td>
+                            <td><label>Életerő</label></td>
+                            <td><label>Szerencse</label></td>
+                            <td><label>Dátum</label></td>
+                        </tr>
                             ';
                             while ($sRow = mysql_fetch_array($sResult)){
                                 echo'
@@ -127,6 +135,9 @@ if (isset($_SESSION['user_name'])){
                                         <td>'.$sRow["story"].'</td>
                                         <td>'.$sRow["page"].'</td>
                                         <td>'.$sRow["dex"].'/'.$sRow["dexAkt"].'</td>
+                                        <td>'.$sRow["hp"].'/'.$sRow["hpAkt"].'</td>
+                                        <td>'.$sRow["luck"].'/'.$sRow["luckAkt"].'</td>
+                                        <td>'.$sRow["sDate"].'</td>
                                     </tr>
                                 ';
                             }
