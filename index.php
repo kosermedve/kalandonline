@@ -42,10 +42,11 @@
 
     </head>
     <body>
-        <?php
+
+        <div id="content" class="container">
+            <?php
             include 'navbar.php';
-        ?>
-        <div id="content" class="container container-fluid ctn_wrapper">
+            ?>
             <?php
                 include 'navigation.php';
             ?>

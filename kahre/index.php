@@ -4,24 +4,20 @@
 
     <?php
         if (lgdin()){
-            echo '<div id="kahre_main" class="row">
-        <div class="col-md-12">
-            <div class="col-md-2">
-                <div class="btn-group-vertical">
-                    <a id="kIntro" class="btn btn-default" href="?nav=kahre&knav=intro">Bevezető</a>
-                    <a id="kRules" class="btn btn-default" href="?nav=kahre&knav=rules">Szabályok</a>
-                    <a id="kChargen" class="btn btn-default" href="?nav=kahre&knav=char">Karakter genereátor</a>
-                    <a id="kStory" class="btn btn-default" href="?nav=kahre&knav=story">Történet</a>
-                    <a id="kSave" class="btn btn-default">Mentés</a>';
-                    if (perm()){
-                        echo'<input type="text" id="load" placeholder="Oldalszám" class="form-control">
-                            <button id="pload" class="btn btn-default">Betöltés</button>
-                        ';
-                    }
-                echo '</div>
-
+            echo '<div id="kahre_main" class="col-md-12">
+        <div class="row">
+            <div class="col-md-2 col-xs-12">
+                <nav class="navbar navbar-default">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a id="kIntro" class="" href="?nav=kahre&knav=intro">Bevezető</a></li>
+                        <li><a id="kRules" class="" href="?nav=kahre&knav=rules">Szabályok</a></li>
+                        <li><a id="kChargen" class="" href="?nav=kahre&knav=char">Karakter genereátor</a></li>
+                        <li><a id="kStory" class="" href="?nav=kahre&knav=story">Történet</a></li>
+                        <li><a id="kSave" class="" href="#">Mentés</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="col-md-8 text-justify" id="kahre_content">';
+            <div class="col-md-8 col-xs-6 text-justify" id="kahre_content">';
 
             if (isset($_GET['knav'])){
                     $knav=$_GET['knav'];
@@ -59,14 +55,14 @@
             echo '
             </div>
             <div>
-                <form id="charsheet" class="col-md-2" role="form">
+                <form id="charsheet" class="col-md-2 col-xs-6" role="form">
                     <div class="form-group">
                         <label class="control-label">Ügyesség Maximum/Aktuális</label>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charDex">
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charDexAkt">
                             </div>
                         </div>
@@ -74,10 +70,10 @@
                     <div class="form-group">
                         <label class="control-label">Életerő Maximum/Aktuális</label>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charHP">
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charHpAkt">
                             </div>
                         </div>
@@ -85,10 +81,10 @@
                     <div class="form-group">
                         <label class="control-label">Szerencse Maximum/Aktuális</label>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charLuck">
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-xs-5">
                             <input type="text" class="form-control" id="charLuckAkt">
                             </div>
                         </div>
@@ -118,7 +114,10 @@
         </div>
     </div>';
         }else{
-            echo 'Nem vagy bejelentkezve';
+            echo '<div class="col-md-6 col-md-offset-3"><div class="panel panel-info">
+                    <div class="panel-heading">Időkorlát</div>
+                    <div class="panel-body" align="center">A bejelentkezésed lejárt, vagy nem jelentkeztél be, kérlek jelentkezz be!</div>
+                </div></div>';
         }
     ?>
 

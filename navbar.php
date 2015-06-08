@@ -35,7 +35,7 @@
                                     <li><a href="?nav=usrl">Felhasználók listája</a></li>
                                     <li><a href="?nav=addpost">Hír hozzáadása</a></li>
                                     <li><a href="?nav=listnews">Hírek listája</a></li>
-                                    <li><a href="?nav=addgame">Játék kovrtálása</a></li>
+                                    <li><a href="?nav=addgame">Játék konvertálása</a></li>
                                 </ul>
                             </li>';
                 }
@@ -57,7 +57,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <form class="form-inline"  id="loginform">
-                                        <div class="form-group col-lg-4">
+                                        <div class="form-group col-lg-4 col-md-4 col-sm-4">
                                             <input type="text" class="form-control" id="username" name="username" placeholder="Felhasználó">
                                             <input type="password" class="form-control" id="password" name="password" placeholder="Jelszó" >
                                             <input type="button" id="login" class="btn btn-success" value="Belépés"/>
