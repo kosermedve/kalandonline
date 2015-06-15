@@ -36,19 +36,6 @@ body { padding-top: 70px; }
     width: 100%;
 }
 
-.news-title{
-    float:left;
-    width:75%;
-    height: auto;
-    overflow:hidden;
-}
-
-.news-date{
-    float:left;
-    width:25%;
-    height: auto;
-    overflow:hidden;
-}
 
 .pages{
     position: relative;
