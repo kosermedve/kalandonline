@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="menu">
-    <div class="container-fluid ">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuNav">
                 <span class="icon-bar"></span>
@@ -42,7 +42,7 @@
                 ?>
 
             </ul>
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
+            <ul class="nav navbar-nav navbar-right">
                 <?php
                 if(isset($_SESSION['user_name'])){
                     echo '
