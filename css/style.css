@@ -36,7 +36,6 @@ body { padding-top: 70px; }
     width: 100%;
 }
 
-
 .pages{
     position: relative;
     width: 200px;
@@ -46,8 +45,6 @@ body { padding-top: 70px; }
 .uname{
     width: 220px;
 }
-
-
 
 .table-cell{
     display: none;

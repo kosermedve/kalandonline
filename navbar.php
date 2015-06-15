@@ -42,7 +42,7 @@
                 ?>
 
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav pull-right">
                 <?php
                 if(isset($_SESSION['user_name'])){
                     echo '
