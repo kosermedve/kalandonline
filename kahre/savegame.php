@@ -26,7 +26,7 @@ if (isset($_POST["save"])){
         echo 'van már mentés';
     }
     else{
-        $query = "INSERT INTO gamesave (id, sName, story, page, dex, dexAkt, hp, hpAkt, luck, luckAkt,food, gear, gold, stuff, note, sDate)
+        $query = "INSERT INTO gamesave (id, sName, story, page, dex, dexAkt, hp, hpAkt, luck, luckAkt, food, gear, gold, stuff, note, sDate)
                   VALUES (DEFAULT , '$sName','kahre','$sPage','$sDex', '$sDexAkt', '$sHp', '$sHpAkt', '$sLuck','$sLuckAkt', '$sFood', '$sGear', '$sGold', '$sStuff', '$sNote', '$sDate');";
         $result = mysql_query($query) or die(mysql_error());
         echo 'siker';
