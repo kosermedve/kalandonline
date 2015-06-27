@@ -22,8 +22,8 @@ if (isset($_POST["save"])){
     mysql_close($dbhandle);
     $num_row = mysql_num_rows($result);
 
-    if( $num_row >= 1 ) {
-        echo 'van már mentés';
+    if( $num_row >= 3 ) {
+        echo 'elérted a limited';
     }
     else{
         $query = "INSERT INTO gamesave (id, sName, story, page, dex, dexAkt, hp, hpAkt, luck, luckAkt, food, gear, gold, stuff, note, sDate)
